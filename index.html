@@ -10,29 +10,46 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="./style1.css">
     <title>Neelabh || Portfolio</title>
-    
 
 </head>
 <body>
-    <header class="header">
-        <div class="container row">
-            <div class="header-img">
-                <img src="./neel.jpeg" alt="">
-            </div>
-            <div class="info">
-                <h1>Hi, I'm Neelabh Nagaich </h1>
-                <p class="info-role">Frontend Developer</p>
-                <p class="info-text">
-                    An aspiring software engineer who likes to build things with the power of code. I mainly write code in javascript and trying to get better on it day by day.
-                </p>
-                <h2 class="connect-info">Connect with me</h2>
-                <br>
-                <a href="https://linkedin.com/in/neelabhnagaich/" target="_blank"><i class="fab fa-linkedin social"></i></a>
-                <a href="https://github.com/neelabhnagaich/" target="_blank"><i class="fab fa-github social"></i></a>
-        
-            </div>
+    <header class="main-header">
+        <div class="logo">
+          <a href="index.html">
+            <!-- <img class="logo-img" src="img/N-logos_black.png" alt="Neelabh"> -->
+            <div>Neelabh Nagaich</div>
+          </a>
         </div>
-        
+        <nav class="desktop-main-menu">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a class="btn" href="./img/neelabhResume.pdf" target="_blank">Resume</a></li>
+          </ul>
+        </nav>
     </header>
+                <!-- hamburger menu -->
+  <button id="menu-btn" class="hamburger" type="button">
+    <span class="hamburger-top"></span>
+    <span class="hamburger-middle"></span>
+    <span class="hamburger-bottom"></span>
+  </button>
+    <div class="social-links">
+        <a href="https://linkedin.com/in/neelabhnagaich/" target="_blank"><i class="fab fa-linkedin social"></i></a>
+        <a href="https://github.com/neelabhnagaich/" target="_blank"><i class="fab fa-github social"></i></a>
+        <button id="theme-toggler" class="theme-button" href="#"><i id="theme-icon" class="fas fa-moon"></i></button>
+    </div>
+    <div class="main-section">
+      <div class="section-container flex-container">
+        <div class="about">
+          <h1 class="big-heading">Hi! I'm Neelabh.</h1>
+          <p class="about-para">I am developer based in India. Currently working as a Frontend Software Engineer at SmartBear. When not working, I thoroughly enjoy working on personal projects to discover and learn new technologies</p>
+        </div>
+        <div class="img-container">
+          <img class="about-img" src="./img/neel-img-resize.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>
