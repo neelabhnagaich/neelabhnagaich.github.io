@@ -12,6 +12,7 @@
     --body-bg: #eeeff1;
     --text-color-primary:#1a1b1f;
     --text-color-secondary:#fff;
+    --alpha: 0.8;
   }
 
 .dark_mode{
@@ -43,19 +44,25 @@ img {
 }
 
 .btn {
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     background-color: var(--text-color-primary);
     color: var(--text-color-secondary);
     border-radius: 0.5rem;
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
+
 .main-header {
     display: flex;
     justify-content: space-between;
+    height: 7rem;
     padding: 2rem 5rem;
     font-weight: 500;
-    position: sticky;
-    top: 0;
+    z-index: 100;
+   position: relative;
 }
 
 .desktop-main-menu ul {
@@ -69,6 +76,38 @@ img {
 
 .desktop-main-menu ul > li + li {
   margin-left: 2rem;   
+}
+
+.mobile-main-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-200%);
+    transition: transform 400ms ease 0s;
+    display: none;
+    
+}
+
+.mobile-main-menu--items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+}
+
+.mobile-menu-item {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    background-color: var(--body-bg);
+    opacity: .8;
+}
+
+.show-menu {
+    transform: translateY(0);
+    display: block;
 }
 
 .hamburger{
@@ -191,6 +230,9 @@ img {
     .hamburger{
         display: block;
     }    
+    .mobile-main-menu {
+        display: block;
+    }
 }
 
 @media (max-width: 810px){
@@ -219,7 +261,7 @@ img {
 @media (max-width: 479px){
     .big-heading{
         font-size: 4.4rem;
-        line-height: 6.4rem;
+        line-height: 5rem;
     }
 
     .about-para{
