@@ -9,16 +9,18 @@
 
 :root{
     font-size: 62.5%;
-    --body-bg: #eeeff1;
+    --body-bg: rgb(238, 239, 241);
     --text-color-primary:#1a1b1f;
     --text-color-secondary:#fff;
     --alpha: 0.8;
+    --background-mobile-menu: rgba(238, 239, 241,0.8)
   }
 
 .dark_mode{
-    --body-bg: #252525;
+    --body-bg: rgb(37, 37, 37);
     --text-color-primary:#fff;
     --text-color-secondary:#1a1b1f;
+    --background-mobile-menu: rgba(37, 37, 37,0.8)
 }
 
 
@@ -41,6 +43,13 @@ li {
 
 img {
     max-width: 100%;
+}
+
+h1 {
+    margin: 20px 0 15px;
+    font-size: 44px;
+    line-height: 62px;
+    font-weight: 500;
 }
 
 .btn {
@@ -101,8 +110,7 @@ header {
 .mobile-menu-item {
     width: 100%;
     padding: 1.5rem 3rem;
-    background-color: var(--body-bg);
-    opacity: .8;
+    background-color: var(--background-mobile-menu);
 }
 
 .show-menu {
@@ -206,11 +214,14 @@ header {
     font-weight: 500;
 }
 
-.about-para {
+.para-light.bigger {
     font-size: 2.5rem;
+}
+
+.para-light {
+    font-size: 2rem;
     line-height: 39px;
     font-weight: 300;
-
 }
 .img-container {
     margin-bottom: 5rem;
@@ -220,6 +231,27 @@ header {
     display: block;
     border-radius: 1.5rem;
     margin: 0 auto;
+}
+
+.career-container {
+    width: 57.5%;
+}
+
+.skills-container {
+    width: 37.5%;
+}
+
+.skills-container > * {
+    display: inline-block;
+}
+
+.skill-name-text {
+    padding: 0 1rem;
+    border: 1px solid #ced1df;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
 }
 
 @media (max-width: 991px){
@@ -251,8 +283,8 @@ header {
         line-height: 7rem;
     }
 
-    .about-para{
-        font-size: 2.5rem;
+    .para-light{
+        font-size: 2rem;
         line-height: 3.9rem;
     }
 }
@@ -264,7 +296,7 @@ header {
         line-height: 5rem;
     }
 
-    .about-para{
+    .para-light{
         font-size: 2rem;
         line-height: 3.2rem;
     }
