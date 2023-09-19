@@ -393,6 +393,14 @@ footer{
     .text-feilds {
         flex-direction: column;
     }
+
+    .form-wrapper {
+        padding: 0;
+    }
+
+    .borderClass {
+        border: none;
+    }
 }
 
 
