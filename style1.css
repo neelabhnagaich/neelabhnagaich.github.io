@@ -4,7 +4,7 @@
 *::before {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;ß
 }
 
 :root{
@@ -23,6 +23,9 @@
     --background-mobile-menu: rgba(37, 37, 37,0.8)
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-size: 1.6rem;
@@ -50,6 +53,10 @@ h1 {
     font-size: 44px;
     line-height: 62px;
     font-weight: 500;
+}
+
+button {
+    border: none;
 }
 
 .btn {
@@ -254,6 +261,75 @@ header {
     line-height: 4rem;
 }
 
+.borderClass {
+    border: 1px solid var(--text-color-primary);
+    border-radius: 20px;
+}
+
+input, textarea{
+    border: none;
+    border-radius: 10px;
+    font-family: Poppins,sans-serif;
+}
+input:focus, textarea:focus{
+    outline: none;
+}
+.text-feild{
+    padding: 20px 15px 20px 10px;
+    margin-bottom: 18px;
+    background-color: hsla(0,0%,100%,.5);
+    line-height: 25px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.form-wrapper {
+    padding:70px 50px;
+    position: relative;
+}
+
+.contact-header-container{
+    width: 46%;
+}
+
+.contacts-container{
+    width: 50%;
+}
+
+.input-feild {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-feilds {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-header-container .heading-3{
+    font-size: 64px;
+}
+
+.btn-contact {
+    display: inline-block
+}
+
+.success-info{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(67, 233, 67);
+    color: var(--text-color-primary);
+    padding: 10px;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+footer{
+    color: #8f929e
+}
+
 @media (max-width: 991px){
     .desktop-main-menu {
         display: none;
@@ -264,6 +340,25 @@ header {
     }    
     .mobile-main-menu {
         display: block;
+    }
+   
+    .form-wrapper {
+        flex-direction: column;
+        position: relative;
+    }
+    .form-wrapper > * {
+        width: 100%;
+    }
+    .text-feilds {
+        flex-direction: row;
+        width: 100%;
+        gap: 3rem;
+    }
+    .text-feilds > * {
+        width: 100%;
+    }
+    .contact-header-container .heading-3{
+        font-size: 36px;
     }
 }
 
@@ -286,6 +381,17 @@ header {
     .para-light{
         font-size: 2rem;
         line-height: 3.9rem;
+    }
+    .text-feilds {
+        flex-direction: row;
+        width: 100%;
+        gap: 0rem;
+    }
+}
+
+@media (max-width: 750px){
+    .text-feilds {
+        flex-direction: column;
     }
 }
 

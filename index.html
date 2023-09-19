@@ -31,8 +31,8 @@
       </div>
       <nav class="desktop-main-menu">
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a class="btn" href="./img/neelabhResume.pdf" target="_blank">Resume</a></li>
         </ul>
       </nav>
@@ -65,7 +65,7 @@
           <p class="para-light bigger">I am developer based in India. Currently working as a Frontend Software Engineer at SmartBear. When not working, I thoroughly enjoy working on personal projects to discover and learn new technologies</p>
         </div>
         <div class="img-container">
-          <img class="about-img" src="./img/neel-img-resize.jpeg" alt="">
+          <img class="about-img" src="./img/profile-pic-light.png" alt="">
         </div>
       </div>
     </div>
@@ -79,13 +79,57 @@
         <div class="skills-container">
             <div class="skill-name-text">JavaScript</div>
             <div class="skill-name-text">ReactJs</div>
+            <div class="skill-name-text">ReactNative</div>
+            <div class="skill-name-text">Nodejs</div>
+            <div class="skill-name-text">Expressjs</div>
             <div class="skill-name-text">HTML/CSS</div>
             <div class="skill-name-text">Java</div>
-            <div class="skill-name-text">Springboot</div>
             <div class="skill-name-text">Python</div>
+            <div class="skill-name-text">SQL</div>
         </div>
       </div>
     </div>
+
+    <div id="contact" class="main-section ">
+      <div class="section-container borderClass">
+        <div class="flex-container form-wrapper">
+          <div class="contact-header-container">
+            <h1 class="heading-3">Want to get in touch?</h1>
+          </div>
+          <div class="contacts-container">
+            <form id="form" class="form-container" action="https://formbold.com/s/3KAMj" method="POST">
+              <div class="text-feilds">
+                <div class="input-feild">
+                  <label for="name">Name</label>
+                  <input class="text-feild" type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="input-feild">
+                  <label for="email">Email</label>
+                  <input class="text-feild" type="email" name="email" id="email" placeholder="Enter Your Email">
+                </div>
+              </div>
+              <div class="text-area input-feild">
+                <label for="message">Message</label>
+                <textarea class="text-feild text-area" name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-contact">Submit</button>
+            </form>
+        </div>
+        <div class="success-info">
+          Successfully Submitted Form
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="main-section">
+        <div class="section-container flex-container">
+          Copyright © 2023 Neelabh Nagaich. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
     
     <script src="./index.js"></script>
 </body>
