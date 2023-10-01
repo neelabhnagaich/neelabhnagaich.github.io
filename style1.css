@@ -69,6 +69,10 @@ button {
 header {
     position: sticky;
     top: 0;
+    animation: slide-down;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
 }
 
 .main-header {
@@ -78,7 +82,7 @@ header {
     padding: 2rem 5rem;
     font-weight: 500;
     z-index: 100;
-   position: relative;
+    position: relative;
 }
 
 .desktop-main-menu ul {
@@ -88,6 +92,13 @@ header {
 .logo-img {
     height: 50px;
     width: 50px; 
+}
+
+.logo{
+    transition: transform 0.3s;
+}
+.logo:hover{
+    transform: scale(1.2);
 }
 
 .desktop-main-menu ul > li + li {
@@ -178,6 +189,8 @@ header {
     padding-right: 3rem;
     padding-bottom: 3rem;
     font-size: 3rem;
+    animation-name: slide-left;
+    animation-duration: 1s;
 }
 .social-links a,button{
     color: var(--text-color-primary);
@@ -193,13 +206,15 @@ header {
 }
 .main-section {
     max-width: 100%;
-    margin: 0 3rem;
+    margin: 0 3rem;    
 }
 
 .section-container {
     width: 100%;
     max-width: 114rem;
     margin: 10rem auto;
+    animation-name: slide-up;
+    animation-duration: 1s;
 }
 
 .flex-container {
@@ -324,10 +339,38 @@ input:focus, textarea:focus{
     padding: 10px;
     border-radius: 15px;
     visibility: hidden;
+    z-index: 999;
 }
 
 footer{
     color: #8f929e
+}
+
+@keyframes slide-down{
+    from{
+        transform: translateY(-100%);
+    }
+    to {
+        transform: none;
+    }
+}
+@keyframes slide-left{
+    from{
+        transform: translateX(100%);
+    }
+    to {
+        transform: none;
+    }
+}
+@keyframes slide-up{
+    from{
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
 }
 
 @media (max-width: 991px){
